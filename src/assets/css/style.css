@@ -1,0 +1,2896 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "IRANSans-Bold";
+    src: url("../fonts/iransansXFaNum/IRANSansXFaNum-Bold.eot") format("embedded-opentype"), url("../fonts/iransansXFaNum/IRANSansXFaNum-Bold.woff") format("woff"), url("../fonts/iransansXFaNum/IRANSansXFaNum-Bold.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IRANSans-Medium";
+    src: url("../fonts/iransansXFaNum/IRANSansXFaNum-Medium.eot") format("embedded-opentype"), url("../fonts/iransansXFaNum/IRANSansXFaNum-Medium.woff") format("woff"), url("../fonts/iransansXFaNum/IRANSansXFaNum-Medium.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "IRANSans-Regular";
+    src: url("../fonts/iransansXFaNum/IRANSansXFaNum-Regular.eot") format("embedded-opentype"), url("../fonts/iransansXFaNum/IRANSansXFaNum-Regular.woff") format("woff"), url("../fonts/iransansXFaNum/IRANSansXFaNum-Regular.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nastaliq";
+    src: url("../fonts/Nastaliq.ttf");
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    direction: rtl;
+    background: #F9F8FC;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.my-80 {
+    margin: 80px 0;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.my-100 {
+    margin: 100px 0;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.gap-2 {
+    gap: 2px;
+}
+
+.gap-4 {
+    gap: 4px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.AZ-img-container {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.AZ-img-container::after {
+    content: "";
+    display: block;
+}
+
+.AZ-img-container-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AZ-img-cover img {
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+}
+
+.AZ-page-container {
+    width: 480px;
+    margin: 0 auto;
+    background: #ffffff;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.AZ-page-container>.container {
+    padding-bottom: 150px;
+    background: #fff;
+}
+
+.AZ-section-title {
+    font-size: 20px;
+    color: #123E44;
+    font-family: "IRANSans-Bold";
+    margin-bottom: 15px;
+}
+
+.AZ-section-text {
+    font-size: 14px;
+    color: #322450;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-primary-btn,
+.AZ-secondary-btn {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: "IRANSans-Medium";
+    padding: 8px 20px;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    background: #643FAE;
+    border: 1.5px solid #643FAE;
+}
+
+.AZ-primary-btn:hover,
+.AZ-secondary-btn:hover {
+    color: #ffffff;
+}
+
+.AZ-secondary-btn {
+    background: transparent;
+    color: #000000;
+    border: 1.5px solid #643FAE;
+}
+
+.AZ-secondary-btn:hover {
+    color: #fff;
+    background: #643FAE;
+}
+
+.saved-questions-btn {
+    border: 1.5px solid #EC930D;
+    color: #EC930D;
+}
+
+.saved-questions-btn:hover {
+    color: #fff;
+    background: #EC930D;
+}
+
+.save-form-btn {
+    background: #4AB26D;
+    border: 1px solid #4AB26D;
+}
+
+.save-form-btn:hover {
+    color: #fff;
+    background: #339453;
+}
+
+.cancel-form-btn {
+    border: 1px solid #4AB26D;
+}
+
+.cancel-form-btn:hover {
+    color: #fff;
+    background: #4AB26D;
+}
+
+.back-btn {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+    border: none;
+    background: transparent;
+}
+
+.page-header-title {
+    font-size: 20px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    padding: 0 30px;
+}
+
+.AZ-radio-group-category label {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #7B7B7B;
+    background: #F7F5FC;
+    cursor: pointer;
+}
+
+.AZ-radio-group-category input {
+    display: none;
+}
+
+.AZ-radio-group-category input:checked~label {
+    border: 2px solid #643FAE;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.AZ-field-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.AZ-field-group label {
+    font-size: 12px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 10px;
+}
+
+.AZ-field-group label span {
+    text-decoration: underline;
+}
+
+.AZ-field-group input,
+.AZ-field-group textarea {
+    font-size: 11px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Regular";
+    border-radius: 5px;
+    border: 1px solid rgba(100, 63, 174, 0.16);
+    padding: 10px;
+    min-width: 50px;
+    flex-grow: 1;
+}
+
+.AZ-field-group input:focus,
+.AZ-field-group textarea:focus {
+    border: 1px solid #643FAE;
+}
+
+.AZ-field-group input {
+    height: 36px;
+}
+
+.group-field_inner {
+    display: flex;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid rgba(100, 63, 174, 0.16);
+    padding: 5px;
+}
+
+.group-field_inner input {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    border-radius: 0;
+    flex-grow: 2;
+}
+
+.group-field_inner input:focus {
+    border: 0;
+}
+
+.group-field_inner span {
+    font-size: 18px;
+    color: #643FAE;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.group-field_inner:focus-within {
+    border: 1px solid #643FAE;
+}
+
+.AZ-radio-group label {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+    position: relative;
+    padding-right: 16px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.AZ-radio-group label::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    transition: all 0.2s linear;
+}
+
+.AZ-radio-group input {
+    display: none;
+}
+
+.AZ-radio-group input:checked~label::after {
+    background: #39A757;
+}
+
+.datepicker-container .datepicker-plot-area {
+    width: 200px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.datepicker-container .datepicker-plot-area .toolbox {
+    display: none;
+}
+
+.datepicker-container .datepicker-plot-area .header {
+    padding: 0;
+    height: auto;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #b6b6b6;
+    padding-bottom: 10px;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator .pwt-btn-prev {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator .pwt-btn-prev::after {
+    content: "\e92b";
+    font-family: "icomoon";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator .pwt-btn-next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator .pwt-btn-next::after {
+    content: "\e92a";
+    font-family: "icomoon";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator .pwt-btn-switch {
+    text-align: center;
+    font-size: 13px;
+    font-family: "IRANSans-Bold";
+    color: #333333;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: #f5f5f5;
+    border-radius: 4px;
+    padding: 0 10px 0 30px;
+    margin: 0;
+    position: relative;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-navigator .pwt-btn-switch::after {
+    content: "\e929";
+    font-family: "icomoon";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    font-size: 16px;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .month-grid-box .header .header-row-cell {
+    font-size: 14px;
+    font-family: "IRANSans-Bold";
+    color: #9C9A9A;
+    background: #f5f5f5;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .selected {
+    background: #643FAE;
+    border-radius: 50%;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .selected span {
+    text-shadow: unset !important;
+    color: #FFFFFF !important;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .today {
+    background: #6A4BA7;
+    border-radius: 50%;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .today span {
+    text-shadow: unset !important;
+    color: #FFFFFF !important;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .today::after {
+    content: unset;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .today::before {
+    content: unset;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days span {
+    font-size: 14px;
+    font-family: "IRANSans-Bold";
+    color: #666666;
+    background: transparent !important;
+    margin: 8px 0 !important;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days span:hover {
+    color: #14426A;
+}
+
+.datepicker-container .datepicker-plot-area .datepicker-day-view .table-days .other-month {
+    color: #CFCDCD;
+}
+
+.upload_image .preview-profile-img {
+    min-width: 100px;
+    outline: 1px solid rgba(100, 63, 174, 0.1607843137);
+    border-radius: 50%;
+}
+
+.upload_image .preview-profile-img::after {
+    padding-bottom: 100%;
+}
+
+.upload_image .upload-profile-wrapper {
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}
+
+.upload_image .upload-profile-wrapper input {
+    display: none;
+}
+
+.upload_image .upload-profile-wrapper label {
+    padding: 5px 20px;
+    font-size: 14px;
+    font-family: "IRANSans-Bold";
+    color: #4D585F;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.upload_image .upload-profile-wrapper label:hover {
+    background: rgb(216, 216, 216);
+}
+
+.AZ-styled-select {
+    min-width: 80px;
+    height: 25px;
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgba(100, 63, 174, 0.16);
+}
+
+.AZ-styled-select::before {
+    content: "\e929";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 16px;
+}
+
+.AZ-styled-select select {
+    font-size: 12px;
+    padding: 0 5px;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+    font-family: "IRANSans-Medium";
+    height: 100%;
+    width: 100%;
+    color: #3C2669;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.AZ-tabs-wrapper {
+    overflow-x: auto;
+}
+
+.AZ-tabs-wrapper li {
+    padding: 0 8px !important;
+    cursor: pointer;
+}
+
+.AZ-tabs-wrapper .tab-link {
+    font-size: 12px;
+    color: #74717B;
+    font-family: "IRANSans-Medium";
+    position: relative;
+    padding: 5px !important;
+    white-space: nowrap;
+}
+
+.AZ-tabs-wrapper .tab-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+}
+
+.AZ-tabs-wrapper .active .tab-link {
+    color: #523390;
+}
+
+.AZ-tabs-wrapper .active .tab-link::after {
+    background: #643FAE;
+}
+
+.AZ-education-page .AZ-educational-tabs {
+    width: 100%;
+}
+
+.AZ-education-page .AZ-educational-tabs li {
+    flex-grow: 1;
+    padding: 0;
+}
+
+.AZ-education-page .AZ-educational-tabs li:last-child .tab-link {
+    border-radius: 11px 0px 0px 11px;
+}
+
+.AZ-education-page .AZ-educational-tabs li:first-child .tab-link {
+    border-radius: 0 11px 11px 0;
+}
+
+.AZ-education-page .AZ-educational-tabs .tab-link {
+    background: #F6F3FC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    color: #727070;
+    padding: 10px 5px;
+}
+
+.AZ-education-page .AZ-educational-tabs .tab-link::after {
+    content: none;
+}
+
+.AZ-education-page .AZ-educational-tabs .active .tab-link {
+    color: #ffffff;
+    background: #643FAE;
+}
+
+.AZ-education-page .AZ-styled-select {
+    position: absolute;
+    right: 0;
+}
+
+.AZ-education-page .page-header-title {
+    font-size: 23px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    padding: 0 70px 0 30px;
+}
+
+.AZ-post-card {
+    border-radius: 8px;
+    background: #F9F8FC;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AZ-post-card .post-card-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.AZ-post-card .post-card-img::after {
+    padding-bottom: 70%;
+}
+
+.AZ-post-card .post-card-title {
+    font-size: 12px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    margin-bottom: 10px;
+}
+
+.AZ-post-card .post-card-text {
+    font-size: 12px;
+    color: #4E475D;
+    font-family: "IRANSans-Bold";
+    max-height: 105px !important;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.AZ-post-card .read-more-btn {
+    font-size: 10px;
+    color: #746DBA;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-post-card .read-more-btn span {
+    font-size: 16px;
+}
+
+.AZ-post-card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(100, 63, 174, 0.2);
+}
+
+.AZ-post-card-horizontal .post-horizontal-img {
+    width: 82px;
+    border-radius: 4px;
+}
+
+.AZ-post-card-horizontal .post-horizontal-img::after {
+    padding-bottom: 100%;
+}
+
+.AZ-post-card-horizontal .post-horizontal-title {
+    font-size: 15px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    margin-bottom: 6px;
+}
+
+.AZ-post-card-horizontal .post-card-writer,
+.AZ-post-card-horizontal .post-card-clock,
+.AZ-post-card-horizontal .post-card-date,
+.AZ-post-card-horizontal .read-more-btn {
+    font-size: 12px;
+    color: #746DBA;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-post-card-horizontal .post-card-category {
+    font-size: 13px;
+    color: #643FAE;
+    font-family: "IRANSans-Medium";
+    display: block;
+    margin-bottom: 8px;
+}
+
+.AZ-search-wrapper {
+    border-radius: 5px;
+    border: 1px solid rgba(71, 52, 243, 0.16);
+    background: #EBEBEE;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.AZ-search-wrapper input {
+    font-size: 14px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Medium";
+    flex-grow: 2;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    padding: 5px;
+}
+
+.AZ-search-wrapper button {
+    color: #7B7B7B;
+    font-size: 20px;
+    padding: 0 15px;
+    background: transparent;
+    border: 0;
+}
+
+.filter-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(71, 52, 243, 0.16);
+    background: #EBEBEE;
+    color: #000000;
+}
+
+.filter-canvas {
+    border-radius: 12px 12px 0 0;
+    border: 0;
+}
+
+.filter-canvas .offcanvas-title {
+    font-size: 16px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+}
+
+.offcanvas {
+    margin: 0 auto;
+    max-width: 480px;
+    height: 60vh;
+}
+
+.AZ-workshop-card {
+    border-radius: 7px;
+    background: #E1D8F4;
+    padding: 9px;
+}
+
+.AZ-workshop-card .workshop-card-img {
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.AZ-workshop-card .workshop-card-img::after {
+    padding-bottom: 80%;
+}
+
+.AZ-workshop-card .workshop-card-title {
+    font-size: 17px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    margin: 5px 0;
+}
+
+.AZ-workshop-card .workshop-card-price {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-workshop-card .workshop-card-teacher {
+    font-size: 14px;
+    color: #4F4F4F;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-workshop-card .hashtag {
+    font-size: 12px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+    pointer-events: none;
+    padding: 4px 10px;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #643FAE;
+    background: #F7F5FC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.AZ-workshop-card .number-participants {
+    font-size: 14px;
+    color: #595561;
+    font-family: "IRANSans-Regular";
+    border-radius: 5px;
+    background: #EEEBF4;
+    padding: 5px 10px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.stars span {
+    font-size: 10px;
+    color: #EC930D;
+}
+
+.AZ-version-category {
+    background: #E1D8F4;
+    border-radius: 8px;
+}
+
+.AZ-version-category img {
+    width: 35px;
+}
+
+.AZ-version-category .version-category-text {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.modal-wrapper .modal-content {
+    border: 1px solid #695592;
+    background: #F8F7FA;
+}
+
+.modal-wrapper .btn-close-modal {
+    width: 23px;
+    height: 23px;
+    background: #B2A2D0 !important;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #482392;
+    border: 0;
+}
+
+.modal-wrapper .modal-title {
+    font-size: 19px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-faq-box {
+    border-radius: 5px;
+    border: 1px solid rgba(100, 63, 174, 0.4);
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 5px;
+}
+
+.AZ-faq-box .faq-box-title {
+    font-size: 13px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-faq-box .faq-number {
+    font-size: 13px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-faq-box span {
+    border-radius: 3px;
+    background: #6A4BA7;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AZ-faq-list {
+    margin-right: 15px;
+}
+
+.AZ-faq-list li {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+    list-style-type: disc;
+    padding: 5px 0;
+}
+
+.AZ-product-card .product-card-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.AZ-product-card .product-card-img::after {
+    padding-bottom: 110%;
+}
+
+.AZ-product-card .product-card-name {
+    font-size: 14px;
+    color: #291550;
+    font-family: "IRANSans-Bold";
+    margin-bottom: 5px;
+}
+
+.AZ-product-card .product-card-text {
+    font-size: 12px;
+    color: #827797;
+    font-family: "IRANSans-Medium";
+}
+
+.auto-slide .swiper-slide {
+    width: auto;
+}
+
+.AZ-product-category {
+    border-radius: 5px;
+    font-size: 14px;
+    color: #234D2E;
+    font-family: "IRANSans-Medium";
+    padding: 5px 8px;
+    display: inline-block;
+}
+
+.AZ-product-category.green {
+    background: rgba(196, 244, 209, 0.4);
+}
+
+.AZ-product-category.yellow {
+    background: rgba(241, 207, 156, 0.4);
+}
+
+.AZ-product-category.pink {
+    background: rgba(220, 144, 199, 0.4);
+}
+
+.AZ-product-category.blue {
+    background: rgba(91, 188, 201, 0.4);
+}
+
+.AZ-product-category.orange {
+    background: rgba(243, 192, 192, 0.4);
+}
+
+.AZ-product-category.purple {
+    background: rgba(214, 203, 236, 0.4);
+}
+
+.AZ-box {
+    border-radius: 5px;
+    background: #EFEBF8;
+    padding: 18px;
+}
+
+.AZ-box .box-title {
+    font-size: 20px;
+    color: #372261;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 10px;
+}
+
+.AZ-box .box-text,
+.AZ-box .box-list {
+    font-size: 15px;
+    color: #635A74;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 10px;
+}
+
+.AZ-box .course-price {
+    font-size: 18px;
+    color: #372261;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-box .box-list {
+    margin-right: 10px;
+}
+
+.AZ-box .box-list li {
+    list-style-type: disc;
+}
+
+.AZ-homepage .banner-img {
+    width: 100%;
+    border-radius: 15px;
+    margin: 10px 0 !important;
+}
+
+.AZ-homepage .banner-img::after {
+    padding-bottom: 35%;
+}
+
+.AZ-homepage .banner-img .banner-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AZ-homepage .banner-img .banner-text {
+    font-size: 12px;
+    color: #000;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-homepage .AZ-category-section .category-img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.AZ-homepage .AZ-category-section .category-img::after {
+    padding-bottom: 100%;
+}
+
+.AZ-homepage .AZ-category-section .category-title {
+    font-size: 13px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-homepage .notif-btn {
+    font-size: 22px;
+    color: #000;
+}
+
+.AZ-homepage .credit {
+    font-size: 18px;
+    color: #000;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-dashboard-page .dashboard-menu-list li {
+    border-bottom: 1px solid rgba(114, 112, 112, 0.6);
+    padding: 12px 0;
+}
+
+.AZ-dashboard-page .profile-img {
+    width: 52px;
+    background: #D9D9D9;
+    border-radius: 50%;
+}
+
+.AZ-dashboard-page .profile-img::after {
+    padding-bottom: 100%;
+}
+
+.AZ-dashboard-page .dashboard-link {
+    font-size: 16px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.AZ-dashboard-page .dashboard-link span {
+    font-size: 20px;
+    color: #4F4F4F;
+}
+
+.AZ-dashboard-page .username {
+    font-size: 18px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-dashboard-page .share-link {
+    background: transparent;
+    padding: 10px;
+    border: 1px dashed #000;
+}
+
+.AZ-dashboard-page .share-link button {
+    font-size: 25px;
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+}
+
+.AZ-dashboard-page .share-link p {
+    font-size: 12px;
+    font-family: "IRANSans-Medium";
+    color: rgba(61, 90, 128, 0.5);
+    margin-bottom: 10px;
+}
+
+.AZ-dashboard-page #link {
+    align-self: center;
+    font-size: 14px;
+    font-family: "IRANSans-Medium";
+    flex-grow: 2;
+    border: none;
+    text-align: left;
+    height: 100%;
+    background: transparent;
+    width: 150px;
+    padding: 0 10px;
+}
+
+.AZ-dashboard-page #copy span {
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.AZ-dashboard-page #copy span.copied::after {
+    content: "با موفقیت کپی شد";
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    height: 30px;
+    display: block;
+    white-space: nowrap;
+    padding: 2px 10px;
+    font-size: 14px;
+    font-family: "IRANSans-Regular";
+    color: #fff;
+    background-color: #522E99;
+    opacity: 1;
+    will-change: opacity, transform;
+    animation: showcopied 1.5s ease;
+}
+
+@keyframes showcopied {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.AZ-dashboard-page .copy-text {
+    font-size: 12px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-login-page {
+    padding: 40px 0;
+}
+
+.AZ-login-page .login-info-title {
+    font-size: 20px;
+    background: linear-gradient(169deg, #4734F3 48.25%, #4BDB72 92.15%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-login-page .login-text {
+    font-size: 13px;
+    color: #8C8AA3;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 10px;
+}
+
+.AZ-login-page .landing-title {
+    font-size: 18px;
+    font-family: "IRANSans-Bold";
+    background: linear-gradient(180deg, #4734F3 0%, #4BDB72 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.AZ-login-page .login-title {
+    font-size: 15px;
+    color: #261D78;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-login-page .change-number {
+    font-size: 15px;
+    color: #39A757;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-login-page .get-code-again {
+    font-size: 11px;
+    color: #8772B0;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-login-page .number-code {
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.AZ-login-page .code-input {
+    font-size: 11px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Regular";
+    border-radius: 5px;
+    border: 1px solid rgba(100, 63, 174, 0.16);
+    text-align: center;
+    height: 50px;
+    outline: none;
+    direction: ltr;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+}
+
+.AZ-login-page .code-input.active {
+    border: 1px solid #643FAE;
+}
+
+.AZ-admin-page {
+    padding: 30px 0;
+}
+
+.AZ-admin-page .dashboard-box {
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.AZ-admin-page .dashboard-box.green {
+    background: #D4E2DE;
+}
+
+.AZ-admin-page .dashboard-box.red {
+    background: #EBDFDF;
+}
+
+.AZ-admin-page .dashboard-box.orange {
+    background: #F7E8D9;
+}
+
+.AZ-admin-page .dashboard-box.purple {
+    background: rgba(132, 101, 193, 0.1607843137);
+}
+
+.AZ-admin-page .dashboard-box.yellow {
+    background: #FFF4CD;
+}
+
+.AZ-admin-page .dashboard-box.gold {
+    background: #ECE8DC;
+}
+
+.AZ-admin-page .dashboard-box-text {
+    font-size: 16px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-admin-page .dashboard-box-img {
+    width: 25px;
+}
+
+.AZ-admin-page .dbox {
+    border-bottom: 1px solid rgba(100, 63, 174, 0.1607843137);
+    padding: 20px 0;
+}
+
+.AZ-admin-page .dbox-img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.AZ-admin-page .dbox-img::after {
+    padding-bottom: 100%;
+}
+
+.AZ-admin-page .dbox-text {
+    font-size: 12px;
+    font-family: "IRANSans-Regular";
+    color: #2C1B50;
+}
+
+.AZ-admin-page .dbox-details {
+    font-size: 12px;
+    font-family: "IRANSans-Regular";
+    color: #868092;
+}
+
+.AZ-category-card {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(100, 63, 174, 0.3);
+    padding: 15px;
+}
+
+.AZ-category-card .category-card-img {
+    min-width: 68px;
+    border-radius: 5px;
+}
+
+.AZ-category-card .category-card-img::after {
+    padding-bottom: 80%;
+}
+
+.AZ-category-card .category-card-title {
+    font-size: 14px;
+    color: #291550;
+    font-family: "IRANSans-Bold";
+    margin-bottom: 10px;
+}
+
+.AZ-category-card .category-card-btn,
+.AZ-category-card .category-card-text {
+    font-size: 14px;
+    color: #827797;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-category-card .category-card-btn {
+    font-size: 11px;
+}
+
+.AZ-category-card .category-card-btn span {
+    font-size: 18px;
+}
+
+.AZ-category-card:hover .category-card-title {
+    color: #643FAE;
+}
+
+.add-hashtag-group .tag-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.add-hashtag-group .tag {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+    pointer-events: none;
+    padding: 6px 6px 6px 25px;
+    margin: 5px;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #643FAE;
+    background: #F7F5FC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.add-hashtag-group .tag::before {
+    pointer-events: all;
+    display: inline-block;
+    content: "\e92f";
+    font-family: "icomoon";
+    left: 0;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.AZ-product-page {
+    overflow: hidden;
+}
+
+.AZ-product-page video {
+    width: 100%;
+}
+
+.AZ-product-page .gallery-img {
+    width: 100%;
+}
+
+.AZ-product-page .gallery-img::after {
+    padding-bottom: 70%;
+}
+
+.AZ-product-page .product-name {
+    font-size: 16px;
+    color: #291550;
+    font-family: "IRANSans-Bold";
+    display: block;
+    border-bottom: 1px solid #AAA8C5;
+    padding-bottom: 20px;
+    margin: 20px 0;
+}
+
+.AZ-product-page .product-details {
+    font-size: 14px;
+    color: #2C1A50;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-product-page .swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    background: #ACA9B3;
+    border-radius: 0;
+}
+
+.AZ-product-page .swiper-pagination-bullet-active {
+    background: #522E99;
+}
+
+.AZ-forum-list .forum-item-img {
+    min-width: 40px;
+    border-radius: 50%;
+}
+
+.AZ-forum-list .forum-item-img::after {
+    padding-bottom: 100%;
+}
+
+.AZ-forum-list .forum-item-name {
+    font-size: 16px;
+    color: #3A3752;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-forum-list .forum-item-time {
+    font-size: 12px;
+    color: #848298;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-forum-list .forum-item-time span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #EC930D;
+}
+
+.AZ-forum-list .forum-item-text {
+    font-size: 12px;
+    color: #615C89;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-file-page .file-title {
+    font-size: 14px;
+    color: #322450;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-file-page .file-tabContainer {
+    border-top: none !important;
+    border-bottom: none !important;
+    padding: 40px 0;
+}
+
+.AZ-file-page .file-details-title {
+    font-size: 15px;
+    color: #322450;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 20px;
+}
+
+.AZ-file-page .file-details-text {
+    font-size: 13px;
+    color: #322450;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 10px;
+}
+
+.AZ-file-page .file-list {
+    margin: 0 20px;
+}
+
+.AZ-file-page .file-list li {
+    list-style-type: decimal;
+}
+
+.ltr {
+    text-align: left;
+    direction: ltr;
+}
+
+.file-item {
+    border: 1px solid rgba(100, 63, 174, 0.2);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.file-item .file-item-img img {
+    width: 60px;
+}
+
+.file-item .file-item-name {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    position: relative;
+    padding-right: 10px;
+}
+
+.file-item .file-item-name::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background: #000;
+}
+
+.file-item .file-item-date {
+    font-size: 12px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.file-item .file-item-date span {
+    color: #EC930D;
+}
+
+.file-item .file-item-text {
+    font-size: 14px;
+    color: #746DBA;
+    font-family: "IRANSans-Regular";
+}
+
+.file {
+    position: relative;
+}
+
+.file .file__value {
+    border-radius: 3px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.file .file__input {
+    width: inherit;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px dashed rgba(100, 63, 174, 0.57);
+    background: rgba(100, 63, 174, 0.16);
+    position: relative;
+    padding: 15px 10px 40px 15px;
+    margin-bottom: 10px;
+}
+
+.file .file__value {
+    background-color: #643FAE;
+    padding: 5px;
+}
+
+.file .file__input--file {
+    position: absolute;
+    opacity: 0;
+    display: none;
+}
+
+.file span {
+    color: #7B7B7B;
+    font-size: 22px;
+}
+
+.file .file__value--text {
+    font-size: 13px;
+    font-family: "IRANSans-Regular";
+    color: #fff;
+}
+
+.file .file__input--label {
+    margin-bottom: 0;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 10px;
+    font-family: "IRANSans-Regular";
+    color: gray;
+}
+
+.file .file__input--label:after {
+    content: attr(data-text-btn);
+    font-size: 12px;
+    cursor: pointer;
+    font-family: "IRANSans-Regular";
+    color: #643FAE;
+    transition: all 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 6px 25px;
+    background: #FFF;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.file .file__value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.file .file__value:after {
+    content: "\e931";
+    font-family: "icomoon";
+    cursor: pointer;
+}
+
+.bottom-navber {
+    border-radius: 16px 16px 0 0;
+    background: #4724f3 !important;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 480px;
+}
+
+.bottom-navber li {
+    flex-grow: 1;
+    padding: 0 10px;
+    height: 100%;
+}
+
+.bottom-navber .sc-menu-item {
+    font-size: 22px;
+    color: #fbf8f5 !important;
+    flex-grow: 1;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.bottom-navber .sc-menu-item::after {
+    padding-bottom: 110%;
+}
+
+.bottom-navber .sc-menu-item.active {
+    color: #373636 !important;
+    transform: translateY(-18px);
+    width: 85%;
+    border-radius: 50%;
+    background: #fffc77 !important;
+    color: #fff;
+    font-size: 20px;
+}
+
+.bottom-navber .sc-menu-item.active::after {
+    padding-bottom: 100%;
+}
+
+.bottom-navber .slider {
+    width: 98px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    background-image: url("../img/Subtract.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.AZ-download-page .download-btn {
+    position: absolute;
+    right: 10px;
+    color: #000;
+    font-size: 20px;
+}
+
+.AZ-download-page .download-btn:hover {
+    color: #482392;
+}
+
+.AZ-download-page .file-details {
+    font-size: 12px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-notif-page .notif-item {
+    border-bottom: 1px solid rgba(100, 63, 174, 0.2);
+    padding: 20px 0;
+}
+
+.AZ-notif-page .notif-img {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AZ-notif-page .notif-img span {
+    font-size: 20px;
+    color: #fff;
+}
+
+.AZ-notif-page .notif-img.yellow {
+    background: #fab005;
+}
+
+.AZ-notif-page .notif-img.red {
+    background: #bf0d0d;
+}
+
+.AZ-notif-page .notif-title,
+.AZ-notif-page .notif-date {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-notif-page .notif-text {
+    font-size: 14px;
+    color: #46414F;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-notif-page .notif-date {
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.AZ-notif-page .notif-date span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #643FAE;
+}
+
+.AZ-test-box {
+    border: 1px solid rgba(100, 63, 174, 0.2);
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.AZ-test-box .test-box-title {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+    position: relative;
+    padding-right: 10px;
+}
+
+.AZ-test-box .test-box-title::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000000;
+    top: 50%;
+    right: 0;
+}
+
+.AZ-test-box .test-box-details {
+    font-size: 12px;
+    color: #6F687F;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-research-page .header-btn {
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+}
+
+.AZ-research-page .AZ-research-box {
+    border-radius: 8px;
+    border: 1px solid rgba(175, 169, 231, 0.71);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.AZ-research-page .AZ-research-box .research-box-title {
+    font-size: 14px;
+    color: #342F3F;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-research-page .AZ-research-box .research-box-text {
+    font-size: 11px;
+    color: #5D5868;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-research-page .AZ-research-box .research-box-details {
+    font-size: 10px;
+    color: #5D5868;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-research-page .research-details-title {
+    font-size: 20px;
+    color: #342F3F;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-research-page .author-profile {
+    width: 22px;
+    border-radius: 50%;
+}
+
+.AZ-research-page .author-profile::after {
+    padding-bottom: 100%;
+}
+
+.AZ-research-page .research-author {
+    font-size: 13px;
+    color: #5D5868;
+    font-family: "IRANSans-Regular";
+}
+
+.details-disease-title {
+    font-size: 16px;
+    color: #332945;
+    font-family: "IRANSans-Bold";
+}
+
+#reservationForm fieldset:not(:first-of-type),
+#createSubdomainForm fieldset:not(:first-of-type) {
+    display: none;
+}
+
+canvas#horizontalBarChartCanvas {
+    max-width: 100%;
+    margin: 40px auto;
+}
+
+.single-chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    justify-content: space-around;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.single-chart .circular-chart {
+    display: block;
+    max-height: 250px;
+}
+
+.single-chart .circle-bg {
+    fill: #fff;
+    stroke: #F6F6F6;
+    stroke-width: 2;
+}
+
+.single-chart .circle {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.single-chart .percentage {
+    fill: #000000;
+    font-family: "IRANSans-Regular";
+    font-size: 8px;
+    text-anchor: middle;
+    color: #000000;
+}
+
+.single-chart.orange {
+    background: #FDE8E1;
+}
+
+.single-chart.orange .circle {
+    stroke: #EE450E;
+}
+
+.single-chart.orange .icon-pin {
+    color: #EE450E;
+}
+
+.single-chart.green {
+    background: #ECFAED;
+}
+
+.single-chart.green .circle {
+    stroke: #0EBC1F;
+}
+
+.single-chart.green .icon-pin {
+    color: #0EBC1F;
+}
+
+#progressbar {
+    margin-bottom: 40px;
+    overflow: hidden;
+    counter-reset: step;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#progressbar li {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7B7B7B;
+    border-radius: 50%;
+    border: 1px solid #CEC3E6;
+}
+
+#progressbar .active {
+    background: #CEC3E6;
+}
+
+#progressbar p {
+    font-size: 14px;
+    color: #858585;
+    font-family: "IRANSans-Medium";
+}
+
+.sidebar {
+    height: 100%;
+}
+
+.message-box {
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.message-box .chat__conversation-header {
+    border-radius: 0 0 15px 15px;
+    background: rgb(225, 216, 244);
+    padding: 0 15px;
+    height: 100px;
+    width: 480px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.message-box .chat__conversation-header .chat-username {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.message-box .chat__conversation-header .chat-profile {
+    width: 47px;
+    border-radius: 50%;
+}
+
+.message-box .chat__conversation-header .chat-profile::after {
+    padding-bottom: 100%;
+}
+
+.message-box .chat__conversation-header .back-btn {
+    font-size: 25px;
+}
+
+.message-box .chat__conversation-header .support-btn {
+    font-size: 25px;
+    color: #482392;
+}
+
+.message-box .file-input__input {
+    display: none;
+}
+
+.message-box .chat__conversation-board {
+    overflow-y: auto;
+    padding: 120px 15px 15px;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.message-box .chat__conversation-board__message-container.reversed {
+    flex-direction: row-reverse;
+}
+
+.message-box .chat__conversation-board__message-container.reversed .chat__text {
+    color: #000000;
+    background: rgba(175, 169, 231, 0.1607843137);
+    border-radius: 16px 16px 16px 0;
+}
+
+.message-box .chat__conversation-board__message-container.reversed .chat__conversation-board__message__context {
+    align-items: flex-end;
+}
+
+.message-box .chat__conversation-board__message__context {
+    max-width: 80%;
+    width: 80%;
+}
+
+.message-box .chat__conversation-board__message-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.message-box .chat__conversation-board__message-container .img__chat {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.message-box .chat__conversation-board__message-container .img__chat img {
+    width: 100%;
+}
+
+.message-box .chat__conversation-board__message-container:not(:last-child) {
+    margin: 0 0 30px 0;
+}
+
+.message-box .chat__text {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-table;
+    font-family: "IRANSans-Regular";
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 10px 20px 10px 40px;
+    background: #4734F3;
+    border-radius: 15px 15px 0 15px;
+}
+
+.message-box .chat__conversation-panel {
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    border-radius: 15px;
+    background: rgba(225, 216, 244, 0.34);
+}
+
+.message-box .chat__conversation-panel__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 2;
+    border-radius: 20px;
+    border: 1px solid #727070;
+    background: rgba(225, 216, 244, 0.6);
+}
+
+.message-box .chat__conversation-panel__inner:focus-within {
+    border: 1px solid #3254CE;
+}
+
+.message-box .chat__conversation-panel__inner .chat__conversation-panel__input {
+    flex-grow: 2;
+    position: relative;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    font-family: "IRANSansXFaNum-Regular";
+    color: #4A4A4A;
+}
+
+.message-box .chat__conversation-panel__inner .send-message-btn {
+    background: transparent;
+    font-size: 25px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-box .chat__conversation-panel__inner .send-message-btn:hover .icon-ri_send-plane-fill:before {
+    color: #3254CE;
+}
+
+.message-box .chat__conversation-panel__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.message-box .voice-message-button {
+    background: #F8F8F8;
+    border: 1px solid #4A4A4A;
+    border-radius: 16px;
+    transition: all 0.2s linear;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 23px;
+}
+
+.message-box .voice-message-button:hover {
+    background: #4A72FF;
+    border: 1px solid #4A72FF;
+    color: #FFFFFF;
+}
+
+.message-box .voice-message-button:hover .icon-ic_sharp-settings-voice:before {
+    color: #FFFFFF;
+}
+
+.message-box .time_masage {
+    font-size: 12px;
+    font-family: "IRANSans-Medium";
+    color: #7B7B7B;
+    margin-top: 5px;
+}
+
+.message-box .file-download {
+    width: 100%;
+    background: #4A72FF;
+    border-radius: 16px;
+    padding: 17px;
+}
+
+.message-box .file-download .download-btn {
+    font-size: 14px;
+    font-family: "IRANSansXFaNum-Medium";
+    color: #FFFFFF;
+    padding: 12px 25px;
+    background: #394B89;
+    border-radius: 11px;
+    transition: all 0.2s linear;
+    border: none;
+}
+
+.message-box .file-download .download-btn:hover {
+    background: #243266;
+}
+
+.message-box .file-download .file-download-name {
+    font-size: 16px;
+    font-family: "IRANSansXFaNum-Medium";
+    color: #FFFFFF;
+}
+
+.message-box .file-download .file-download-size {
+    font-size: 12px;
+    font-family: "IRANSansXFaNum-Regular";
+    color: #FFFFFF;
+}
+
+.message-box .file-download .icon-mdi_file-download {
+    font-size: 40px;
+}
+
+.message-box .voice {
+    width: 100%;
+    background: #4A4A4A;
+    text-align: center;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 16px;
+}
+
+.message-box .voice .voice-title {
+    font-size: 16px;
+    font-family: "IRANSansXFaNum-Medium";
+    color: #FFFFFF;
+}
+
+.message-box .voice .voice-time {
+    font-size: 12px;
+    font-family: "IRANSansXFaNum-Regular";
+    color: #FFFFFF;
+}
+
+.message-box .voice input[type=range] {
+    -webkit-appearance: none !important;
+    margin: 0px;
+    padding: 0px;
+    background: #fff;
+    height: 5px;
+    width: 150px;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.message-box .voice input[type=range]::-ms-fill-lower {
+    background: #777777;
+}
+
+.message-box .voice input[type=range]::-ms-fill-upper {
+    background: #777777;
+}
+
+.message-box .voice input[type=range]::-moz-range-track {
+    border: none;
+    background: #777777;
+}
+
+.message-box .voice input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #fff;
+    height: 15px;
+    width: 3px;
+    border-radius: 50%;
+    box-shadow: -100vw 0 0 100vw #f7d9b9;
+}
+
+.message-box .voice input[type=range]::-moz-range-thumb {
+    background: #fff;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+}
+
+.message-box .voice input[type=range]::-ms-thumb {
+    -webkit-appearance: none !important;
+    background: #fff;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+}
+
+.message-box .voice.load {
+    height: 60px;
+}
+
+.message-box .voice.load .file-is-loading {
+    display: flex;
+}
+
+.message-box .voice.load .togglePlay {
+    display: none;
+}
+
+.message-box .progress_wrapper {
+    background: #777777;
+    flex-grow: 2;
+    width: 100%;
+    height: 3px;
+    flex-direction: row-reverse;
+    display: flex;
+}
+
+.message-box .progress {
+    width: 1px;
+    height: 3px;
+    background: #fff;
+    transition: width 0.1s linear;
+}
+
+.message-box .togglePlay {
+    background: transparent;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 150ms ease-out;
+}
+
+.message-box .togglePlay:after {
+    content: "\e924";
+    display: block;
+    color: #fff;
+    font-family: "icomoon";
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message-box .togglePlay.active:after {
+    content: "\e92b";
+}
+
+.js-remove--exam-row {
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bf0d0d;
+    color: #fff;
+    border: 0;
+}
+
+.support-contact span {
+    font-size: 20px;
+}
+
+.AZ-panel .test-date {
+    font-size: 12px;
+    color: #6F687F;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-panel .skill-tag {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Regular";
+    pointer-events: none;
+    padding: 6px 15px;
+    margin: 5px;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid #643FAE;
+    background: #F7F5FC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.AZ-panel .profile-img {
+    width: 70px;
+    border-radius: 50%;
+}
+
+.AZ-panel .profile-img::after {
+    padding-bottom: 100%;
+}
+
+.AZ-panel .expertise {
+    font-size: 12px;
+    color: #746496;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-panel .authentication-link {
+    border-radius: 5px;
+    border: 1px solid #737078;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.AZ-panel .authentication-link p {
+    font-size: 14px;
+    color: #332945;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-panel .authentication-link .authentication-title {
+    font-size: 10px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Medium";
+    margin-bottom: 5px;
+}
+
+.AZ-post-page .post-title {
+    font-size: 22px;
+    color: #000000;
+    font-feature-settings: "IRANSans-Regular";
+}
+
+.AZ-post-page .post-details {
+    font-size: 12px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Regular";
+}
+
+.AZ-post-page .line {
+    height: 1px;
+    width: 100%;
+    background: rgba(100, 63, 174, 0.1607843137);
+    margin: 20px 0;
+}
+
+.comment-box {
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+.comment-box.selected {
+    background: rgba(100, 63, 174, 0.16);
+}
+
+.comment-box .comment-profile {
+    width: 28px;
+    border-radius: 50%;
+}
+
+.comment-box .comment-profile::after {
+    padding-bottom: 100%;
+}
+
+.comment-box .comment-text {
+    font-size: 12px;
+    color: #000;
+    font-family: "IRANSans-Regular";
+}
+
+.comment-box .comment-name {
+    font-size: 14px;
+    color: #000;
+    font-family: "IRANSans-Regular";
+}
+
+.comment-box .comment-date {
+    font-size: 10px;
+    color: #7B7B7B;
+    font-family: "IRANSans-Regular";
+}
+
+.comment-box .like-btn {
+    font-size: 20px;
+    color: #000000;
+}
+
+.comment-box .like-btn.active {
+    color: red;
+}
+
+.pin-box {
+    background: rgba(100, 63, 174, 0.44);
+    padding: 11px 14px;
+    margin-bottom: 10px;
+}
+
+.pin-box .pin-box-title {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.pin-box .pin-btn {
+    font-size: 20px;
+    color: #000;
+}
+
+article h1 {
+    font-size: 22px;
+    color: #000000;
+    font-feature-settings: "IRANSans-Regular";
+    margin-bottom: 20px;
+}
+
+article h2,
+article h3,
+article h4,
+article h5 {
+    font-size: 18px;
+    color: #000000;
+    font-feature-settings: "IRANSans-Regular";
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+article p {
+    font-size: 14px;
+    color: #4E475D;
+    font-family: "IRANSans-Regular";
+    margin-bottom: 10px;
+}
+
+article img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    width: 100%;
+}
+
+.table-wrapper thead th {
+    font-size: 14px;
+    font-family: "IRANSans-Medium";
+    color: #000000;
+    padding: 10px 0;
+}
+
+.table-wrapper td,
+.table-wrapper th {
+    border: none;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.table-wrapper tbody tr {
+    border-radius: 5px;
+    background: rgba(186, 170, 217, 0.16);
+}
+
+.table-wrapper tbody tr:nth-child(even) {
+    background: #fff;
+}
+
+.table-wrapper tbody td {
+    font-size: 12px;
+    font-family: "IRANSans-Regular";
+    color: #000000;
+    padding: 10px 0;
+}
+
+.table-wrapper .score {
+    color: #3FA662;
+}
+
+.increase-credit-btn {
+    font-size: 16px;
+    color: #0C5B21;
+    font-family: "IRANSans-Medium";
+}
+
+.increase-credit-btn span {
+    color: #33C85B;
+    font-size: 20px;
+}
+
+.quantity-field {
+    min-width: 100%;
+    height: 30px;
+    background: #F1F4F5;
+    border-radius: 8px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.quantity-field .value-button {
+    height: 100%;
+    width: 33%;
+    padding: 0;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-field .number {
+    border: none;
+    margin: 0px;
+    height: 100%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IRANSans-Bold";
+    font-size: 12px;
+    background: transparent;
+}
+
+.quantity-field .number::-moz-selection {
+    background: none;
+}
+
+.quantity-field .number::selection {
+    background: none;
+}
+
+.increaseCredit-canvas .suggested-values {
+    background: rgba(175, 169, 231, 0.16);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px 10px;
+}
+
+#open {
+    display: flex;
+    justify-content: center;
+}
+
+#control {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    z-index: 50;
+    color: #fff;
+    text-align: center;
+}
+
+.hov {
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+#cont {
+    width: 100%;
+    position: relative;
+    background: #FCFCFC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#cont video {
+    width: 100%;
+}
+
+.AZ-test-page .rate-qu {
+    font-size: 10px;
+    color: #643FAE;
+    font-family: "IRANSans-Bold";
+}
+
+.AZ-test-page .report-btn {
+    font-size: 14px;
+    color: #000000;
+    font-family: "IRANSans-Medium";
+}
+
+.AZ-test-page .save-btn.active {
+    color: #efb660;
+}
+
+.AZ-test-page .save-btn,
+.AZ-test-page .sidebar-menu {
+    font-size: 20px;
+    color: #000;
+}
+
+.AZ-test-page .qu-number {
+    font-size: 16px;
+    color: #000000;
+    font-family: "IRANSans-Bold";
+}
+
+#rating li {
+    font-size: 14px;
+    color: #000;
+    font-family: "IRANSans-Medium";
+    display: none;
+}
+
+#rating li.active {
+    display: block;
+}
+
+#rating .active {
+    display: block;
+}
+
+.scores-progress__title {
+    font-size: 14px;
+    color: #000;
+    font-family: "IRANSans-Medium";
+}
+
+.amazing-offer-time {
+    font-size: 14px;
+    color: #fff;
+    font-family: "IRANSans-Regular";
+    border-radius: 4px;
+    background: #695592;
+    padding: 8px 15px;
+}
+
+.amazing-offer-time .part {
+    display: flex;
+}
+
+.amazing-offer-time .part:first-child .text {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .AZ-page-container {
+        width: 100%;
+    }
+
+    .page-header-title {
+        font-size: 16px;
+    }
+
+    .AZ-forum-list .forum-item-name {
+        font-size: 14px;
+    }
+
+    .AZ-forum-list .forum-item-time {
+        font-size: 10px;
+    }
+
+    .offcanvas {
+        max-width: 100%;
+    }
+
+    .bottom-navber {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .AZ-section-title {
+        font-size: 14px;
+    }
+
+    .AZ-section-text {
+        font-size: 12px;
+    }
+
+    .AZ-research-page .research-details-title {
+        font-size: 16px;
+    }
+
+    .message-box .chat__conversation-panel {
+        width: 100%;
+    }
+
+    .message-box .chat__conversation-header {
+        width: 100%;
+    }
+
+    .bottom-navber .slider {
+        width: 90px;
+        height: 75%;
+        background-size: 80px;
+    }
+
+    .bottom-navber li {
+        padding: 10px;
+    }
+
+    .bottom-navber .slider {
+        transform: translateX(-65%);
+    }
+}
+
+
+
+
+
+
+/* new styles */
+.border-green {
+    border-color: #00ff89 !important;
+}
+
+
+.home-top-icons {
+    display: flex;
+}
+
+
+
+
+.bottom-navber {
+    border-radius: 16px 16px 0 0;
+    background: #E6E0F2;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 480px;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bottom-navber li {
+    flex-grow: 1;
+    padding: 0 10px;
+    height: 100%;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bottom-navber .sc-menu-item {
+    font-size: 22px;
+    color: #3E3254;
+    flex-grow: 1;
+    margin: auto;
+    transition: 0.5s;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.bottom-navber .sc-menu-item::after {
+    padding-bottom: 110%;
+}
+
+.bottom-navber .sc-menu-item.active {
+    transform: translateY(-18px);
+    width: 85%;
+    border-radius: 50%;
+    background: #643FAE;
+    color: #fff;
+    font-size: 20px;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+li:has(.sc-menu-item.active) {
+    background-image: url('../../assets/img/Subtract.svg') !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    margin-top: -1px;
+}
+
+.bottom-navber .sc-menu-item.active::after {
+    padding-bottom: 100%;
+}
+
+.bottom-navber .slider {
+    width: 98px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    background-image: url("../img/Subtract.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+}

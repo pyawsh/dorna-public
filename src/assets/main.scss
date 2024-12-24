@@ -1,0 +1,17 @@
+@mixin flex($align:center,$justify:center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+$transition: all .2s linear;
+
+
+@import "scss/components";
+@import "scss/base";
+@import "scss/responsive";
+@import "scss/style";
+@import "css/style.css";
+@import "css/libraries/bootstrap.rtl.min.css";
+@import "css/libraries/font-icon.css";
+@import "css/libraries/persian-datepicker.css";

@@ -1,0 +1,29 @@
+
+@media screen and (max-width : 991px){
+   
+}
+@media screen and (max-width : 480px){
+    .AZ-page-container{
+        width: 100%;
+    }
+    .page-header-title {
+        font-size: 16px;
+    }
+    .AZ-forum-list{
+        .forum-item-name {
+            font-size: 14px;
+        }
+        .forum-item-time {
+            font-size: 10px;
+        }
+    }
+    .offcanvas {
+        max-width: 100%;
+    }
+    // bottom navbar
+    .bottom-navber{
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
